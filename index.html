@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Document</title>
+    </head>
+    <body>
+        <h1 id="counter"></h1>
+        <div class="btn-container">
+            <button id="increase-btn">Increase</button>
+            <button id="decrease-btn">Decrease</button>
+            <button id="reset-btn">Reset</button>
+        </div>
+        <script>
+            let counter=11000;
+            const counterEl =document.getElementById("counter");
+            counterEl.innerText=counter;
+
+            const increaseBtn=document.getElementById("increase-btn");
+            increaseBtn.addEventListener("click",function (){
+                counter++;
+                counterEl.innerText = counter;
+            } );
+            const decreaseBtn=document.getElementById("decrease-btn");
+            decreaseBtn.addEventListener("click",function (){
+                counter--;
+                counterEl.innerText = counter;
+            });
+            const resetBtn=document.getElementById("reset-btn");
+            resetBtn.addEventListener("click",function (){
+                counter = 0;
+                counterEl.innerText = counter;
+            })
+        </script>
+    </body>
+</html>
